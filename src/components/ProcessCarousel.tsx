@@ -47,8 +47,8 @@ export default function ProcessCarousel() {
     return (
         <div className={styles.carousel} ref={emblaRef}>
             <div className={styles.container}>
-                {steps.map((step) => (
-                    <div key={step.id} className={styles.slide}>
+                {[...steps, ...steps, ...steps].map((step, index) => (
+                    <div key={`${step.id}-${index}`} className={styles.slide}>
                         <div className={styles.card} style={{ background: step.gradient }}>
                             <div className={styles.content}>
                                 <span className={styles.number}>0{step.id}</span>
