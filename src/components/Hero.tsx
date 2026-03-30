@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Mail } from 'lucide-react';
+import { ArrowRight, Mail, CheckCircle } from 'lucide-react';
 import styles from './Hero.module.css';
 
 const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed = 100, pauseDuration = 2000) => {
@@ -109,6 +109,18 @@ export default function Hero() {
                     <p className={styles.description}>
                         I transform complex problems into elegant, scalable digital solutions. With a blend of technical expertise and creative vision, I help businesses build trust and authority through exceptional design and engineering.
                     </p>
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginTop: '1rem', marginBottom: '2.5rem' }}>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)', color: '#10b981', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>
+                            <CheckCircle size={16} /> 100% Halal Content
+                        </span>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(59, 130, 246, 0.1)', border: '1px solid rgba(59, 130, 246, 0.2)', color: '#3b82f6', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>
+                            <CheckCircle size={16} /> Modest Designs
+                        </span>
+                        <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', background: 'rgba(139, 92, 246, 0.1)', border: '1px solid rgba(139, 92, 246, 0.2)', color: '#8b5cf6', borderRadius: '50px', fontSize: '0.9rem', fontWeight: 600 }}>
+                            <CheckCircle size={16} /> Ethical Approach
+                        </span>
+                    </div>
 
                     <div className={styles.ctaGroup}>
                         <a href="#contact" className={styles.primaryBtn}>
