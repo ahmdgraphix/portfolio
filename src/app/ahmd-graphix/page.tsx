@@ -5,6 +5,7 @@ import {
   MessageCircle, BarChart, PenTool, Star, 
   TrendingUp, Layers, Check, ArrowRight
 } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const metadata = {
   title: 'AHMD Graphix - Social Media Management Proposal',
@@ -43,7 +44,8 @@ export default function AhmdGraphixProposal() {
 
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', marginTop: '3rem' }}>
               <a href="https://wa.me/916381950719" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontWeight: 'bold', textDecoration: 'none' }}>
-                WhatsApp: 6381950719
+                <FaWhatsapp size={20} />
+                Contact Us
               </a>
               <a href="mailto:ahamedirshad1412@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50px', color: '#fff', textDecoration: 'none' }}>
                 <Mail size={20} />
@@ -63,7 +65,7 @@ export default function AhmdGraphixProposal() {
               At <strong style={{color: '#fff'}}>AHMD Graphix</strong>, we don&apos;t just manage social media—we build brands that people trust, follow, and buy from.
             </p>
             <p style={{ fontSize: 'clamp(1rem, 2vw, 1.1rem)', lineHeight: '1.8', opacity: 0.95, marginBottom: '1.5rem', color: '#fff' }}>
-              We are a creative digital service provider focused on helping businesses establish a strong and consistent online presence. With a deep understanding of the Indian market, trends, and audience behavior, we craft strategies that drive real results.
+              We are a creative digital service provider focused on helping businesses establish a strong and consistent online presence. With a deep understanding of the market, trends, and audience behavior, we craft strategies that drive real results.
             </p>
             <div className="glass" style={{ padding: '2rem', borderLeft: '4px solid var(--primary)', marginTop: '2rem' }}>
               <h3 style={{ fontSize: 'clamp(1.2rem, 2.5vw, 1.5rem)', marginBottom: '1rem', color: '#fff' }}>Our Mission is Simple:</h3>
@@ -76,7 +78,7 @@ export default function AhmdGraphixProposal() {
 
         {/* 3. Our Vision & Mission */}
         <ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
             <div className="glass glass-hover" style={{ padding: '3rem 2rem', borderRadius: '16px' }}>
               <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 1.8rem)', marginBottom: '1rem', color: 'var(--primary)' }}>Vision</h3>
               <p style={{ fontSize: 'clamp(1rem, 2vw, 1.1rem)', lineHeight: '1.7', opacity: 0.9, color: '#fff' }}>
@@ -101,7 +103,7 @@ export default function AhmdGraphixProposal() {
               Challenges Businesses Face Today
             </h2>
             <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', marginBottom: '2rem', opacity: 0.9, color: '#fff' }}>Most businesses struggle with:</p>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem', marginBottom: '2.5rem' }}>
               {['Inconsistent content posting', 'Poor design and low-quality visuals', 'No clear brand identity', 'Low engagement and reach', 'No time to manage social media', 'Lack of strategy and direction'].map((chal, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '12px', border: '1px solid rgba(239, 68, 68, 0.2)' }}>
                   <span style={{ color: '#f87171', fontWeight: 'bold' }}>✕</span>
@@ -141,7 +143,7 @@ export default function AhmdGraphixProposal() {
         <ScrollReveal>
           <div>
             <h2 className="gradient-text" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '3rem', textAlign: 'center', color: '#fff' }}>
-              Our Services (Detailed)
+              Our Services
             </h2>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
               
@@ -154,11 +156,11 @@ export default function AhmdGraphixProposal() {
                   <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', margin: 0, color: '#fff' }}>A. Content Creation</h3>
                 </div>
                 <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '2rem', color: '#fff' }}>Content is the backbone of social media success.</p>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                   <div>
                     <h4 style={{ fontSize: '1.3rem', marginBottom: '1rem', color: 'var(--primary)' }}>We create:</h4>
                     <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                      {['Static posts (offers, branding, awareness)', 'Carousel posts (educational & storytelling)', 'Reels / short-form videos (high reach content)', 'Festival creatives (India-specific marketing)', 'Promotional designs (sales, launches)'].map((item, i) => (
+                      {['Static posts (offers, branding, awareness)', 'Carousel posts (educational & storytelling)', 'Islamic Reminders & Value-driven content', 'Halal-compliant short-form videos', 'Promotional designs (sales, launches)'].map((item, i) => (
                         <li key={i} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}><ArrowRight size={16} color="var(--primary)" style={{marginTop:'4px'}} /> <span style={{ opacity: 0.9, color: '#fff' }}>{item}</span></li>
                       ))}
                     </ul>
@@ -175,13 +177,13 @@ export default function AhmdGraphixProposal() {
               </div>
 
               {/* Grid for other services */}
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
                 <div className="glass glass-hover" style={{ padding: '2rem', borderRadius: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
                     <div style={{ padding: '1rem', background: 'rgba(139, 92, 246, 0.1)', borderRadius: '12px' }}>
                       <Smartphone size={32} color="var(--secondary)" />
                     </div>
-                    <h3 style={{ fontSize: '1.5rem', margin: 0, color: '#fff' }}>B. Social Media Mgt</h3>
+                    <h3 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.5rem)', margin: 0, color: '#fff', wordBreak: 'break-word', whiteSpace: 'normal' }}>B. Social Media Management</h3>
                   </div>
                   <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                     {['Account setup & optimization', 'Bio & profile enhancement', 'Content scheduling', 'Highlight & feed structuring', 'Monthly calendar'].map((item, i) => (
@@ -234,7 +236,7 @@ export default function AhmdGraphixProposal() {
                   <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', margin: 0, color: '#fff' }}>E. Additional Services (Add-Ons)</h3>
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                  {['Paid Ads (Meta Ads – FB & IG)', 'Influencer Marketing', 'Product Photography', 'Logo & Identity Design', 'Poster & Banner Design'].map((item, i) => (
+                  {['Paid Ads (Meta Ads – FB & IG)', 'Video Editing & Animation', 'Product Photography', 'Logo & Identity Design', 'Poster & Banner Design'].map((item, i) => (
                     <span key={i} style={{ padding: '0.75rem 1.5rem', borderRadius: '50px', border: '1px solid var(--glass-border)', background: 'rgba(255,255,255,0.02)', color: '#fff' }}>
                       {item}
                     </span>
@@ -252,7 +254,7 @@ export default function AhmdGraphixProposal() {
             <h2 className="gradient-text" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '3rem', textAlign: 'center', color: '#fff' }}>
               Our Plans & Pricing
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
               
               {/* Basic Plan */}
               <div className="glass glass-hover" style={{ padding: '2.5rem 2rem', display: 'flex', flexDirection: 'column', borderRadius: '24px' }}>
@@ -371,7 +373,7 @@ export default function AhmdGraphixProposal() {
               </h2>
               <p style={{ fontSize: '1.1rem', opacity: 0.9, marginBottom: '2rem', color: '#fff' }}>We are not just designers—we are growth partners.</p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
-                {['Creative designs', 'Indian audience focus', 'Affordable pricing', 'Consistent execution', 'Personalized strategies', 'High ROI focus'].map((item, i) => (
+                {['Creative designs', 'Global & Halal audience focus', 'Affordable pricing', 'Consistent execution', 'Personalized strategies', 'High ROI focus'].map((item, i) => (
                   <span key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.25rem', background: 'rgba(255,255,255,0.05)', borderRadius: '50px', border: '1px solid var(--glass-border)', fontSize: '0.95rem', color: '#fff' }}>
                     <CheckCircle size={16} color="var(--primary)" /> {item}
                   </span>
@@ -411,7 +413,7 @@ export default function AhmdGraphixProposal() {
         
         {/* Quick Info */}
         <ScrollReveal>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
             <div className="glass" style={{ padding: '2rem', borderRadius: '16px' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Content Workflow & Reporting</h3>
               <ul style={{ paddingLeft: '1.2rem', opacity: 0.95, gap: '0.5rem', display: 'flex', flexDirection: 'column' }}>
@@ -425,11 +427,11 @@ export default function AhmdGraphixProposal() {
             <div className="glass" style={{ padding: '2rem', borderRadius: '16px' }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem', color: '#fff' }}>Target Industries We Serve</h3>
               <ul style={{ paddingLeft: '1.2rem', opacity: 0.95, gap: '0.5rem', display: 'flex', flexDirection: 'column' }}>
-                <li>Restaurants & Cafes</li>
-                <li>Salons & Beauty Clinics</li>
-                <li>Real Estate Businesses</li>
-                <li>Coaches & Consultants</li>
-                <li>Retail & Local Stores</li>
+                <li>Halal Restaurants & Cafes</li>
+                <li>E-commerce & Modest Fashion</li>
+                <li>Real Estate & Agency</li>
+                <li>Clinics & Healthcare</li>
+                <li>Tech & IT Solutions</li>
               </ul>
             </div>
 
@@ -457,20 +459,21 @@ export default function AhmdGraphixProposal() {
 
         {/* Final CTA */}
         <ScrollReveal>
-          <div className="glass" style={{ padding: 'clamp(3rem, 5vw, 5rem) 2rem', textAlign: 'center', background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1))', border: '1px solid rgba(59, 130, 246, 0.3)', borderRadius: '24px' }}>
-            <h2 className="gradient-text" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1rem', color: '#fff' }}>Investment Summary</h2>
+          <div className="glass" style={{ padding: 'clamp(2rem, 4vw, 5rem) clamp(1rem, 3vw, 2rem)', textAlign: 'center', background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1))', border: '1px solid rgba(59, 130, 246, 0.3)', borderRadius: '24px', overflow: 'hidden' }}>
+            <h2 className="gradient-text" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', marginBottom: '1rem', color: '#fff', wordBreak: 'break-word' }}>Investment Summary</h2>
             <p style={{ fontSize: '1.2rem', opacity: 0.9, marginBottom: '0.5rem', color: '#fff' }}>We recommend:</p>
-            <h3 style={{ fontSize: 'clamp(1.8rem, 3vw, 2rem)', color: 'var(--primary)', marginBottom: '1rem' }}>Standard Plan – ₹18,000/month</h3>
+            <h3 style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', color: 'var(--primary)', marginBottom: '1rem', wordBreak: 'break-word' }}>Standard Plan – ₹18,000/month</h3>
             <p style={{ opacity: 0.8, marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem auto', color: '#fff' }}>This plan offers the best balance between cost and growth.</p>
 
-            <h2 className="gradient-text" style={{ fontSize: 'clamp(2rem, 4vw, 2.5rem)', marginBottom: '1rem', color: '#fff' }}>Let&apos;s Work Together</h2>
+            <h2 className="gradient-text" style={{ fontSize: 'clamp(1.8rem, 4vw, 2.5rem)', marginBottom: '1rem', color: '#fff', wordBreak: 'break-word' }}>Let&apos;s Work Together</h2>
             <p style={{ fontSize: 'clamp(1rem, 2vw, 1.2rem)', opacity: 0.9, marginBottom: '2rem', maxWidth: '600px', margin: '0 auto 2rem auto', color: '#fff' }}>
               Your social media has the power to bring real customers—and <strong style={{color: '#fff'}}>AHMD Graphix</strong> is here to make that happen.
             </p>
             
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', marginBottom: '3rem' }}>
             <a href="https://wa.me/916381950719" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontSize: '1.1rem', fontWeight: 'bold', textDecoration: 'none', boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)' }}>
-              WhatsApp Us Today
+              <FaWhatsapp size={24} />
+              Contact Us
             </a>
           </div>
 

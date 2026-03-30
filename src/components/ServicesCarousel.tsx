@@ -35,7 +35,7 @@ const services = [
 
 export default function ServicesCarousel() {
     const [emblaRef] = useEmblaCarousel(
-        { loop: true, align: 'start', dragFree: true },
+        { loop: true, align: 'center', dragFree: true },
         // Negative speed makes it scroll in the opposite direction
         [AutoScroll({ speed: -1, stopOnInteraction: false, stopOnMouseEnter: false })]
     );

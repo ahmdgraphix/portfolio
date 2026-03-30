@@ -40,7 +40,7 @@ const steps = [
 
 export default function ProcessCarousel() {
     const [emblaRef] = useEmblaCarousel(
-        { loop: true, align: 'start', dragFree: true },
+        { loop: true, align: 'center', dragFree: true },
         [AutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: false })]
     );
 
