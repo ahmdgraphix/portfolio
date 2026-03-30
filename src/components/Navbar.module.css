@@ -6,14 +6,12 @@
     z-index: 1000;
     transition: all 0.3s ease;
     padding: 1.5rem 0;
+    background: var(--background);
 }
 
 .scrolled {
     padding: 1rem 0;
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--glass-border);
+    background: var(--background);
 }
 
 .container {
@@ -109,10 +107,7 @@
     top: 100%;
     left: 0;
     width: 100%;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    background: var(--background);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -139,5 +134,19 @@
 
     .mobileControls {
         display: none;
+    }
+}
+
+.menuOpen {
+    background: var(--background);
+}
+
+@media (max-width: 768px) {
+    .nav {
+        background: var(--background);
+    }
+
+    .scrolled {
+        background: var(--background);
     }
 }

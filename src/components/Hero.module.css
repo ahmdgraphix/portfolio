@@ -56,8 +56,8 @@
 .subtitle {
     font-size: 1.25rem;
     font-weight: 300;
-    color: var(--foreground);
-    opacity: 0.8;
+    color: #fff;
+    opacity: 0.95;
     height: 2.5rem;
     overflow: hidden;
     margin-bottom: 1.5rem;
@@ -105,8 +105,8 @@
 .description {
     max-width: 36rem;
     font-size: 1.125rem;
-    color: var(--foreground);
-    opacity: 0.7;
+    color: #fff;
+    opacity: 0.9;
     line-height: 1.6;
     margin-bottom: 2rem;
 }
@@ -239,6 +239,40 @@
     }
 }
 
+.mobileImageWrapper {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.mobileImageContainer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--glass-border);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.mobileGlow {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    /* Center of the 100px image */
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity: 0.5;
+    filter: blur(20px);
+    z-index: 0;
+}
+
 @media (min-width: 768px) {
     .container {
         grid-template-columns: 1fr 1fr;
@@ -250,5 +284,9 @@
 
     .graphicColumn {
         display: block;
+    }
+
+    .mobileImageWrapper {
+        display: none;
     }
 }

@@ -7,10 +7,11 @@ import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'About', href: '#process' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/#services' },
+    { name: 'About', href: '/#process' },
+    { name: 'Proposal', href: '/#smm-proposal' },
+    { name: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {

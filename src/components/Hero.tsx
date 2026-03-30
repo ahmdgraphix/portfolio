@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowRight, Mail } from 'lucide-react';
 import styles from './Hero.module.css';
@@ -51,6 +50,48 @@ export default function Hero() {
                         Available for Hire
                     </div>
 
+                    <div className={styles.mobileImageWrapper}>
+                        <div className={styles.mobileGlow} />
+                        <div className={styles.mobileImageContainer}>
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className={styles.profileImage} style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}>
+                                <defs>
+                                    <linearGradient id="gradMob1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stopColor="var(--primary)" stopOpacity="1" />
+                                        <stop offset="100%" stopColor="var(--secondary)" stopOpacity="1" />
+                                    </linearGradient>
+                                    <linearGradient id="gradMob2" x1="100%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stopColor="var(--accent)" stopOpacity="1" />
+                                        <stop offset="100%" stopColor="var(--primary)" stopOpacity="1" />
+                                    </linearGradient>
+                                </defs>
+                                <motion.path
+                                    initial={{ pathLength: 0, opacity: 0 }}
+                                    animate={{ pathLength: 1, opacity: 1 }}
+                                    transition={{ duration: 2, ease: "easeInOut" }}
+                                    d="M100 20 L180 60 L180 140 L100 180 L20 140 L20 60 Z"
+                                    fill="rgba(255, 255, 255, 0.05)"
+                                    stroke="url(#gradMob1)"
+                                    strokeWidth="4"
+                                />
+                                <motion.path
+                                    initial={{ pathLength: 0, opacity: 0 }}
+                                    animate={{ pathLength: 1, opacity: 1 }}
+                                    transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
+                                    d="M100 20 L100 100 L180 140 M100 100 L20 140 M100 100 L100 180"
+                                    fill="none"
+                                    stroke="url(#gradMob2)"
+                                    strokeWidth="2"
+                                />
+                                <motion.circle
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ duration: 1, delay: 1 }}
+                                    cx="100" cy="100" r="10" fill="url(#gradMob1)"
+                                />
+                            </svg>
+                        </div>
+                    </div>
+
                     <h1 className={styles.title}>
                         Irshad <span className={styles.highlight}>Ahamed</span>
                     </h1>
@@ -73,32 +114,13 @@ export default function Hero() {
                         <a href="#contact" className={styles.primaryBtn}>
                             Let&apos;s Talk <Mail size={20} />
                         </a>
-                        <a href="#projects" className={styles.secondaryBtn}>
+                        {/* <a href="#projects" className={styles.secondaryBtn}>
                             View Projects <ArrowRight size={20} />
-                        </a>
+                        </a> */}
                     </div>
                 </motion.div>
 
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1, delay: 0.2 }}
-                    className={styles.graphicColumn}
-                >
-                    <div className={styles.imageWrapper}>
-                        <div className={styles.glow} />
-                        <div className={styles.imageContainer}>
-                            <Image
-                                src="/profile.jpg"
-                                alt="Irshad Ahamed"
-                                fill
-                                className={styles.profileImage}
-                                priority
-                                suppressHydrationWarning
-                            />
-                        </div>
-                    </div>
-                </motion.div>
+                {/* Remove Graphic Column */}
             </div>
 
             <div className={styles.scrollIndicator}>
