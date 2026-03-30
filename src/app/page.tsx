@@ -58,7 +58,7 @@ export default function Home() {
                   We don't just manage social media—we build brands that people trust, follow, and buy from. Discover our complete Social Media Management & Branding strategies.
                 </p>
                 <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
-                  <a href="/ahmd-graphix" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontSize: '1.1rem', fontWeight: 'bold', textDecoration: 'none', boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
+                  <a href="/ahmd-graphix" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontSize: '1.1rem', fontWeight: 'bold', textDecoration: 'none', boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
                     Know More <ArrowRight size={20} />
                   </a>
                 </div>
