@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '@/components/Navbar';
 import ScrollReveal from '@/components/ScrollReveal';
 import { 
   Mail, Target, CheckCircle, Smartphone, 
@@ -15,6 +16,7 @@ export const metadata = {
 export default function AhmdGraphixProposal() {
   return (
     <>
+      <Navbar />
       <div style={{ padding: '6rem 5%', maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '4rem', color: '#fff' }}>
         
         {/* 1. Cover Page */}

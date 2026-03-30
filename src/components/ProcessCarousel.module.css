@@ -13,7 +13,7 @@
 .container {
     display: flex;
     margin-left: -2rem;
-    /* Negate the first slide's left padding */
+    gap: 0;
 }
 
 .slide {
@@ -21,18 +21,18 @@
     min-width: 0;
     position: relative;
     padding-left: 2rem;
+    margin: 0;
     box-sizing: border-box;
-    /* Add spacing between slides inside the flex item */
 }
 
 @media (max-width: 768px) {
     .container {
-        margin-left: 0;
+        margin-left: -1rem;
     }
     .slide {
         flex: 0 0 85%;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 0;
     }
 }
 

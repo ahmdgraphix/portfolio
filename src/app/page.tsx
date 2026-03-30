@@ -47,17 +47,17 @@ export default function Home() {
         {/* ========================================= */}
         {/* == SMM PROPOSAL CARD LINK (Know More) == */}
         {/* ========================================= */}
-        <section id="smm-proposal" style={{ padding: '0 5% 6rem 5%', maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem', zIndex: 10, position: 'relative' }}>
+        <section id="smm-proposal" style={{ padding: '0 5% 6rem 5%', maxWidth: '1200px', margin: '0 auto', display: 'flex', flexDirection: 'column', gap: '2rem', zIndex: 10, position: 'relative', width: '100%', boxSizing: 'border-box' }}>
           <ScrollReveal>
-             <div className="glass glass-hover" style={{ padding: 'clamp(3rem, 5vw, 4rem)', width: '100%', maxWidth: '900px', margin: '0 auto', textAlign: 'center', borderRadius: '24px', border: '1px solid var(--glass-border)', background: 'linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))' }}>
+             <div className="glass glass-hover" style={{ padding: 'clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem)', width: '100%', maxWidth: '900px', margin: '0 auto', textAlign: 'center', borderRadius: '24px', border: '1px solid var(--glass-border)', background: 'linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))', boxSizing: 'border-box', overflow: 'hidden' }}>
                 <div style={{ display: 'inline-flex', padding: '1rem', background: 'rgba(59, 130, 246, 0.1)', borderRadius: '50%', marginBottom: '1.5rem' }}>
                   <Target size={40} color="var(--primary)" />
                 </div>
-                <h2 className="gradient-text" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1rem', fontWeight: 800 }}>Social Media Management</h2>
-                <p style={{ opacity: 0.9, marginBottom: '2.5rem', fontSize: 'clamp(1.1rem, 2vw, 1.3rem)', color: '#fff', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
+                <h2 className="gradient-text" style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1rem', fontWeight: 800, wordBreak: 'break-word' }}>Social Media Management</h2>
+                <p style={{ opacity: 0.9, marginBottom: '2.5rem', fontSize: 'clamp(1rem, 3vw, 1.3rem)', color: '#fff', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
                   We don't just manage social media—we build brands that people trust, follow, and buy from. Discover our complete Social Media Management & Branding strategies.
                 </p>
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
                   <a href="/ahmd-graphix" target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.75rem', padding: '1rem 2.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontSize: '1.1rem', fontWeight: 'bold', textDecoration: 'none', boxShadow: '0 4px 15px rgba(59, 130, 246, 0.4)', transition: 'transform 0.2s ease, box-shadow 0.2s ease' }}>
                     Know More <ArrowRight size={20} />
                   </a>
@@ -77,19 +77,19 @@ export default function Home() {
         </section>
 
         {/* 3. Contact Segment */}
-        <section id="contact" style={{ minHeight: 'auto', padding: '6rem 0', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', zIndex: 10 }}>
+        <section id="contact" style={{ minHeight: 'auto', padding: '6rem 5%', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', zIndex: 10, width: '100%', boxSizing: 'border-box' }}>
           <ScrollReveal>
-            <div className="glass" style={{ padding: '4rem', width: '100%', maxWidth: '800px', margin: '0 auto' }}>
-              <h2 style={{ fontSize: '3rem', marginBottom: '1rem', textAlign: 'center' }} className="gradient-text">Let&apos;s Work Together</h2>
-              <p style={{ textAlign: 'center', opacity: 0.8, marginBottom: '3rem', fontSize: '1.2rem', color: '#fff' }}>
+            <div className="glass" style={{ padding: 'clamp(2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 4rem)', width: '100%', maxWidth: '800px', margin: '0 auto', boxSizing: 'border-box', overflow: 'hidden' }}>
+              <h2 style={{ fontSize: 'clamp(1.8rem, 6vw, 3rem)', marginBottom: '1rem', textAlign: 'center', wordBreak: 'break-word' }} className="gradient-text">Let&apos;s Work Together</h2>
+              <p style={{ textAlign: 'center', opacity: 0.8, marginBottom: '3rem', fontSize: 'clamp(1rem, 3vw, 1.2rem)', color: '#fff' }}>
                 Ready to start your next project? Drop me a line.
               </p>
-              <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
-                <a href="mailto:ahamedirshad1412@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontWeight: 'bold', textDecoration: 'none' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+                <a href="mailto:ahamedirshad1412@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontWeight: 'bold', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                   <Mail size={20} />
                   Email Me
                 </a>
-                <a href="https://wa.me/916381950719" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '1rem 2rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50px', color: '#fff', textDecoration: 'none' }}>
+                <a href="https://wa.me/916381950719" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50px', color: '#fff', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

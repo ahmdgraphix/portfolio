@@ -43,7 +43,7 @@ export default function ServicesCarousel() {
     return (
         <div className={styles.carousel} ref={emblaRef}>
             <div className={styles.container}>
-                {[...services, ...services, ...services].map((service, index) => (
+                {services.map((service, index) => (
                     <div key={`${service.id}-${index}`} className={styles.slide}>
                         <div className={styles.card}>
                             <div className={styles.content}>
