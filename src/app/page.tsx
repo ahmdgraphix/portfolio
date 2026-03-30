@@ -85,11 +85,11 @@ export default function Home() {
                 Ready to start your next project? Drop me a line.
               </p>
               <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                <a href="mailto:ahamedirshad1412@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontWeight: 'bold', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                <a href="mailto:ahamedirshad1412@gmail.com" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: 'var(--primary)', color: '#fff', borderRadius: '50px', fontWeight: 'bold', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                   <Mail size={20} />
                   Email Me
                 </a>
-                <a href="https://wa.me/916381950719" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50px', color: '#fff', textDecoration: 'none', whiteSpace: 'nowrap' }}>
+                <a href="https://wa.me/916381950719" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.75rem 1.5rem', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: '50px', color: '#fff', textDecoration: 'none', whiteSpace: 'nowrap' }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"

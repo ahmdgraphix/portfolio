@@ -10,12 +10,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 1,
         },
-        // Add other routes here if you have them, e.g.:
-        // {
-        //   url: `${baseUrl}/about`,
-        //   lastModified: new Date(),
-        //   changeFrequency: 'monthly',
-        //   priority: 0.8,
-        // },
+        {
+            url: `${baseUrl}/ahmd-graphix`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
     ];
 }
