@@ -1,8 +1,7 @@
 'use client';
 
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, Environment, Stars, MeshDistortMaterial } from '@react-three/drei';
-import * as THREE from 'three';
+import { Canvas } from '@react-three/fiber';
+import { Environment, Stars, MeshDistortMaterial } from '@react-three/drei';
 
 interface GooeyShapeProps {
     position: [number, number, number];
@@ -12,19 +11,17 @@ interface GooeyShapeProps {
     radius?: number;
 }
 
-const GooeyShape = ({ position, color, speed = 2, distort = 0.6, radius = 1 }: GooeyShapeProps) => {
+const GooeyShape = ({ position, color, radius = 1 }: GooeyShapeProps) => {
     return (
-        <Float speed={speed} rotationIntensity={2} floatIntensity={2}>
-            <mesh position={position}>
-                <sphereGeometry args={[radius, 128, 128]} />
-                <MeshDistortMaterial
-                    color={color}
-                    speed={5} // Increased speed for more movement
-                    distort={distort}
-                    radius={1}
-                />
-            </mesh>
-        </Float>
+        <mesh position={position}>
+            <sphereGeometry args={[radius, 128, 128]} />
+            <MeshDistortMaterial
+                color={color}
+                speed={0}
+                distort={0}
+                radius={1}
+            />
+        </mesh>
     );
 };
 
@@ -32,24 +29,14 @@ const FloatingShapes = () => {
     return (
         <>
             {/* Large blurry lumps */}
-            <GooeyShape position={[-6, 4, -8]} color="#3b82f6" radius={5} distort={0.4} speed={0.8} />
-            <GooeyShape position={[8, -6, -12]} color="#8b5cf6" radius={6} distort={0.5} speed={0.6} />
-            <GooeyShape position={[-5, -4, -10]} color="#06b6d4" radius={4} distort={0.3} speed={0.9} />
+            <GooeyShape position={[-6, 4, -8]} color="#3b82f6" radius={5} />
+            <GooeyShape position={[8, -6, -12]} color="#8b5cf6" radius={6} />
+            <GooeyShape position={[-5, -4, -10]} color="#06b6d4" radius={4} />
 
             {/* Smaller accents */}
-            <GooeyShape position={[4, 5, -15]} color="#2563eb" radius={2} distort={0.6} speed={1.2} />
+            <GooeyShape position={[4, 5, -15]} color="#2563eb" radius={2} />
         </>
     );
-};
-
-const CameraController = () => {
-    useFrame((state) => {
-        // Parallax effect
-        state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, state.mouse.x * 0.5, 0.05);
-        state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, state.mouse.y * 0.5, 0.05);
-        state.camera.lookAt(0, 0, 0);
-    });
-    return null;
 };
 
 export default function ThreeBackground() {
@@ -77,14 +64,14 @@ export default function ThreeBackground() {
                 zIndex: 1
             }} />
             <Canvas camera={{ position: [0, 0, 5], fov: 20 }}>
-                <CameraController />
                 <ambientLight intensity={0.5} />
                 <pointLight position={[10, 10, 10]} intensity={1} color="#3b82f6" />
                 <pointLight position={[-10, -10, -10]} intensity={1} color="#8b5cf6" />
-                <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} speed={1} />
+                <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} speed={0} />
                 <FloatingShapes />
                 <Environment preset="city" />
             </Canvas>
         </div>
     );
 }
+

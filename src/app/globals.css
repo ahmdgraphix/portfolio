@@ -72,24 +72,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Animations */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
 
-  50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
 
 .gradient-text {
   background: linear-gradient(135deg, var(--primary), var(--secondary));

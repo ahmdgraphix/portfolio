@@ -1,51 +1,13 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { ArrowRight, Mail, CheckCircle } from 'lucide-react';
 import styles from './Hero.module.css';
 
-const useTypewriter = (words: string[], typingSpeed = 150, deletingSpeed = 100, pauseDuration = 2000) => {
-    const [displayText, setDisplayText] = useState('');
-    const [wordIndex, setWordIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
-
-    useEffect(() => {
-        const currentWord = words[wordIndex];
-
-        const handleTyping = () => {
-            if (isDeleting) {
-                setDisplayText(currentWord.substring(0, displayText.length - 1));
-            } else {
-                setDisplayText(currentWord.substring(0, displayText.length + 1));
-            }
-
-            if (!isDeleting && displayText === currentWord) {
-                setTimeout(() => setIsDeleting(true), pauseDuration);
-            } else if (isDeleting && displayText === '') {
-                setIsDeleting(false);
-                setWordIndex((prev) => (prev + 1) % words.length);
-            }
-        };
-
-        const timer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed);
-        return () => clearTimeout(timer);
-    }, [displayText, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseDuration]);
-
-    return displayText;
-};
-
 export default function Hero() {
-    const typeWriterText = useTypewriter(['Graphics Designer', 'SaaS Builder', 'Developer', 'Video Editor']);
     return (
         <section id="home" className={styles.hero}>
             <div className={styles.container}>
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className={styles.content}
-                >
+                <div className={styles.content}>
                     <div className={styles.badge}>
                         Available for Hire
                     </div>
@@ -64,28 +26,19 @@ export default function Hero() {
                                         <stop offset="100%" stopColor="var(--primary)" stopOpacity="1" />
                                     </linearGradient>
                                 </defs>
-                                <motion.path
-                                    initial={{ pathLength: 0, opacity: 0 }}
-                                    animate={{ pathLength: 1, opacity: 1 }}
-                                    transition={{ duration: 2, ease: "easeInOut" }}
+                                <path
                                     d="M100 20 L180 60 L180 140 L100 180 L20 140 L20 60 Z"
                                     fill="rgba(255, 255, 255, 0.05)"
                                     stroke="url(#gradMob1)"
                                     strokeWidth="4"
                                 />
-                                <motion.path
-                                    initial={{ pathLength: 0, opacity: 0 }}
-                                    animate={{ pathLength: 1, opacity: 1 }}
-                                    transition={{ duration: 2, delay: 0.5, ease: "easeInOut" }}
+                                <path
                                     d="M100 20 L100 100 L180 140 M100 100 L20 140 M100 100 L100 180"
                                     fill="none"
                                     stroke="url(#gradMob2)"
                                     strokeWidth="2"
                                 />
-                                <motion.circle
-                                    initial={{ scale: 0 }}
-                                    animate={{ scale: 1 }}
-                                    transition={{ duration: 1, delay: 1 }}
+                                <circle
                                     cx="100" cy="100" r="10" fill="url(#gradMob1)"
                                 />
                             </svg>
@@ -97,13 +50,7 @@ export default function Hero() {
                     </h1>
 
                     <div className={styles.subtitle}>
-                        I am a{' '}
-                        <span className={styles.typewriterWrapper}>
-                            <span className={`${styles.role} ${styles.highlight} ${styles.typewriterText}`}>
-                                {typeWriterText}
-                            </span>
-                            <span className={styles.cursor}>_</span>
-                        </span>
+                        I am a <span className={`${styles.role} ${styles.highlight}`}>SaaS Builder & Developer</span>
                     </div>
 
                     <p className={styles.description}>
@@ -130,7 +77,7 @@ export default function Hero() {
                             View Projects <ArrowRight size={20} />
                         </a> */}
                     </div>
-                </motion.div>
+                </div>
 
                 {/* Remove Graphic Column */}
             </div>
@@ -141,3 +88,4 @@ export default function Hero() {
         </section>
     );
 }
+
